@@ -1,0 +1,125 @@
+/* Container for the course */
+.html-course-container {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+  }
+  
+  /* Sidebar Navigation */
+  .html-course-nav {
+    width: 250px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .html-course-nav h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #088474;
+  }
+  
+  .html-course-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .html-course-nav ul li {
+    margin: 10px 0;
+  }
+  
+  .html-course-nav ul li a {
+    text-decoration: none;
+    color: #088474;
+    font-weight: bold;
+  }
+  
+  .html-course-nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main Content Area */
+  .html-course-content {
+    flex: 1;
+    padding-left: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+  }
+  
+  .html-course-content section {
+    margin-bottom: 40px;
+  }
+  
+  .html-course-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #0a5c51;
+  }
+  
+  .html-course-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .html-course-content pre {
+    background-color: #f9f9f9;
+    border-left: 4px solid #088474;
+    padding: 15px;
+    font-family: Consolas, Monaco, 'Courier New', monospace;
+    overflow-x: auto;
+  }
+  
+  .html-course-content pre code {
+    color: #d63384;
+  }
+  body.dark-mode .html-course-container{
+    background-color: #222;
+    color: #f0f0f0;
+  }
+
+  body.dark-mode .html-course-content {
+    background-color: #222;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .html-course-nav h2, body.dark-mode .html-course-nav a {
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .html-course-content pre {
+    background-color: #333;
+  }
+
+  .btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .prev-btn{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+  .next-btn{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .html-course-container {
+      flex-direction: column;
+    }
+    
+    .html-course-nav {
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .html-course-content {
+      padding-left: 0;
+    }
+  }
+  

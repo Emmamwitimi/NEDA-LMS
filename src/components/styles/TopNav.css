@@ -1,0 +1,79 @@
+/* TopNav Main Container */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #0a5c51;  /* Neda's main color */
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo Styles */
+  .logo {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  /* Title Styles */
+  h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Icon Styles */
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 40px;
+  }
+  i:hover {
+    color: #f0f0f0; /* Light hover effect */
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Dark Mode for TopNav */
+  body.dark-mode .main {
+    background-color: #222;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .icons i {
+    color: #f0f0f0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+  
+    .logo {
+      width: 40px;
+    }
+  
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  

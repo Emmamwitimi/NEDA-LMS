@@ -1,0 +1,116 @@
+/* LeftNav Main Container */
+.left-nav {
+    width: 200px;
+    background-color: #0a5c51;
+    padding: 20px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: 100%;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: white;
+    z-index: 999;
+  }
+  body.dark-mode .left-nav {
+    background-color: #222;
+    color: #f0f0f0;
+  }
+  
+  /* LinkCard Container */
+  .link-card ul {
+    top: 50px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Link Item Styles */
+  .link-item {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  body.dark-mode .link-item {
+    background-color: #1f1d1d;
+    color: #f0f0f0;
+  }
+  
+  .link-item:hover {
+    background-color: #088474;
+    border-radius: 5px;
+  }
+  
+  
+  .link-item i {
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Chevron Icon Animation */
+  .fa-circle-chevron-up, .fa-circle-chevron-down {
+    transition: transform 0.3s ease;
+  }
+  
+  .fa-circle-chevron-up {
+    transform: rotate(180deg);
+  }
+  
+  /* Dropdown Container */
+  .dropdown {
+    margin-top: 10px; /* Space below the "Courses" card */
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Dropdown Item (Independent Cards) */
+  .dropdown-item {
+    padding: 10px 15px;
+    background-color: #0a5c51; /* Same as link item color */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    width: 70%; /* Full width within its container */
+  }
+  body.dark-mode .dropdown-item {
+    background-color: #1f1d1d;
+    color: #f0f0f0;
+  }
+  .dropdown-item:active {
+    background-color: #088474;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #088474;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .left-nav {
+        width: 200px;
+        padding: 15px;
+    }
+  
+    .link-item {
+        font-size: 1rem;
+    }
+  
+    .dropdown-item {
+        font-size: 0.9rem;
+    }
+  }
+  

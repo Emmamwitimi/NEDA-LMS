@@ -1,0 +1,65 @@
+/* Dashboard.css */
+.dashboard {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    
+  }  
+  .dashboard h1 {
+    gap: 20px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard .card-containers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    padding: 10px;
+  }
+  
+  .dashboard .course-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .dashboard .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  .dashboard .course-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .course-card h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .card-containers {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .course-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  } 
+
+  
