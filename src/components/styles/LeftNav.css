@@ -113,4 +113,19 @@
         font-size: 0.9rem;
     }
   }
+  /* Extra small screens */
+@media (max-width: 480px) {
+  .left-nav {
+      width: 70%;
+      padding: 10px;
+  }
+
+  .link-item {
+      font-size: 0.9rem;
+  }
+
+  .dropdown-item {
+      font-size: 0.8rem;
+  }
+}
   

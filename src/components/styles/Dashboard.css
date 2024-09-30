@@ -61,5 +61,44 @@
       max-width: 300px;
     }
   } 
+  /* Media Query for Tablets and Smaller Devices */
+@media (max-width: 768px) {
+  .dashboard h1 {
+      font-size: 1.5rem; /* Smaller header for mobile */
+  }
+
+  .card-containers {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center;
+      gap: 10px; /* Reduce gap between cards */
+  }
+
+  .course-card {
+      width: 100%;
+      max-width: 300px; /* Make cards wider on smaller screens */
+      margin-bottom: 20px;
+  }
+}
+
+/* Media Query for Smaller Mobile Devices */
+@media (max-width: 480px) {
+  .dashboard h1 {
+      font-size: 1.2rem; /* Even smaller header on very small screens */
+  }
+
+  .course-card {
+      padding: 15px; /* Reduce padding inside the card */
+      width: 90%; /* Make the card take more horizontal space */
+  }
+
+  .course-card img {
+      width: 80px; /* Smaller image for smaller screens */
+      height: 80px;
+  }
+
+  .course-card h2 {
+      font-size: 1.2rem; /* Smaller font for the title */
+  }
+}
 
   
