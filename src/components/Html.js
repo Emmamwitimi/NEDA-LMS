@@ -7,7 +7,7 @@ const Html = () => {
       <nav className="html-course-nav">
         <h2>HTML Refresher Course</h2>
         <ul>
-          <li><a href="#semantic-html">Semantic HTML</a></li>
+          <li><a href="#semantic-html">Introduction to  HTML</a></li>
           <li><a href="#forms">Forms</a></li>
           <li><a href="#multimedia">Multimedia</a></li>
           <li><a href="#accessibility">Accessibility</a></li>
@@ -18,8 +18,8 @@ const Html = () => {
 
       <div className="html-course-content">
         <section id="semantic-html">
-          <h3>Semantic HTML</h3>
-          <p>Semantic HTML introduces meaning to your markup by using tags that describe their content...</p>
+          <h3>Introduction to HTML</h3>
+          <p> <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"> Introduction to HTML</a></li> </p>
           <pre>{`
 <article>
   <header>
