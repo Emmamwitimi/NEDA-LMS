@@ -160,3 +160,37 @@
       font-size: 0.7rem;
   }
 }
+/* Initially hide the nav on mobile screens */
+.left-nav {
+  transform: translateX(-100%);
+}
+
+/* Show the nav when open */
+.left-nav.open {
+  transform: translateX(0);
+}
+
+/* Hamburger button styling */
+.hamburger {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Only display the hamburger on smaller screens */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  /* Make sure the nav is always visible on larger screens */
+  .left-nav {
+    transform: translateX(0);
+    position: relative;
+  }
+}

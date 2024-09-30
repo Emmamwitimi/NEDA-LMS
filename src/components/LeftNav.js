@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useState}from 'react'
 import LinkCard from './LinkCard'
 import "./styles/LeftNav.css"
 
 const LeftNav = ({selectedCourse, setSelectedCourse}) => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
     let links = ['Dashboard', 'Courses']
     let courses= ['HTML','CSS','JavaScript']
   return (
