@@ -13,7 +13,7 @@ const LinkCard = ({ links, courses, setSelectedCourse }) => {
 
   const handleCourseClick = (course) => {
     setSelectedCourse(course);
-    setDropdownOpen(false); // Close the dropdown after selection
+    setDropdownOpen(true); // Close the dropdown after selection
   };
 
   return (

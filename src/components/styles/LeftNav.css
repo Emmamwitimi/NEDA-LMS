@@ -1,166 +1,134 @@
-/* Left Navigation Styles */
+/* LeftNav styling */
 .left-nav {
+  width: 250px;
   margin-top: 50px;
-  width: 200px; /* Fixed width for desktop */
-  background-color: #0a5c51; /* Primary background color */
-  padding: 20px;
-  position: fixed; /* Keep it fixed on the left side */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-  height: 100%; /* Full height of the viewport */
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-family: Arial, sans-serif;
-  color: white; /* Text color */
-  z-index: 999; /* Ensure it's above other content */
+  background-color: #0a5c51;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -250px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  color: #fcf9f9;
 }
 
-/* Dark mode styles */
+.left-nav.open {
+  left: 0;
+}
+
 body.dark-mode .left-nav {
-  background-color: #222; /* Dark mode background */
-  color: #f0f0f0; /* Dark mode text color */
+  background-color: #222;
+  color: #f0f0f0;
 }
 
-/* Link List Styles */
+/* Hamburger button */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Styling for the links inside the sidebar */
 .link-card ul {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
+  margin-top: 50px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Individual Link Item Styles */
-.link-item {
-  padding: 10px 15px; /* Internal padding */
-  font-size: 1.1rem; /* Font size */
-  color: white; /* Text color */
-  cursor: pointer; /* Pointer on hover */
-  display: flex; /* Flexbox for layout */
-  justify-content: space-between; /* Space between text and icon */
-  align-items: center; /* Center items vertically */
-  transition: background-color 0.3s ease; /* Smooth background transition */
-  border-radius: 5px; /* Rounded corners */
-  margin-bottom: 10px; /* Space below items */
+.link-card .link-item {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-body.dark-mode .link-item {
-  background-color: #1f1d1d; /* Background for dark mode */
-  color: #f0f0f0; /* Text color for dark mode */
+.link-card .link-item:hover {
+  background-color: #088474;
 }
 
-/* Link Item Hover Effect */
-.link-item:hover {
-  background-color: #088474; /* Change background on hover */
-}
-
-/* Icon Styles */
-.link-item i {
-  font-size: 1rem; /* Icon size */
-  margin-left: 10px; /* Space between text and icon */
-}
-
-/* Dropdown Styles */
+/* Dropdown styling */
 .dropdown {
-  margin-top: 10px; /* Space below the main link items */
-  position: relative; /* Position for dropdown items */
+  background-color: #0a5c51;
 }
 
-/* Dropdown Item Styles */
-.dropdown-item {
-  padding: 10px 15px; /* Internal padding */
-  background-color: #0a5c51; /* Background color */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for dropdown items */
-  margin-bottom: 10px; /* Space below items */
-  color: white; /* Text color */
-  font-size: 1rem; /* Font size */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth background transition */
-  width: 70%; /* Fixed width for dropdown items */
-}
+  /* Chevron Icon Animation */
+  .fa-circle-chevron-up, .fa-circle-chevron-down {
+    transition: transform 0.3s ease;
+  }
+  
+  .fa-circle-chevron-up {
+    transform: rotate(180deg);
+  }
 
+ /* Dropdown Item (Independent Cards) */
+ .dropdown-item {
+  padding: 10px 15px;
+  background-color: #096c5f; /* Same as link item color */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  width: 70%; /* Full width within its container */
+}
 body.dark-mode .dropdown-item {
-  background-color: #1f1d1d; /* Dark mode background */
-  color: #f0f0f0; /* Dark mode text color */
+  background-color: #1f1d1d;
+  color: #f0f0f0;
+}
+.dropdown-item:active {
+  background-color: #088474;
 }
 
 .dropdown-item:hover {
-  background-color: #088474; /* Change background on hover */
+  background-color: #088474;
 }
 
-/*
- Media Queries for Responsiveness 
-@media (max-width: 1024px) {
-  .left-nav {
-    width: 180px; // Slightly narrower on medium screens
-    padding: 15px; // Reduce padding
-  }
 
-  .link-item {
-    font-size: 1rem; // Smaller font size
-  }
-
-  .dropdown-item {
-    font-size: 0.9rem; // Smaller dropdown font size
-  }
-}
-
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
-  .left-nav {
-    width: 150px; // Further reduce width on smaller screens
-    padding: 15px; // Adjust padding
-  }
-
-  .link-item {
-    font-size: 0.9rem; // Reduce font size
-  }
-
-  .dropdown-item {
-    font-size: 0.8rem; // Smaller font size for dropdowns
-  }
-}
-
-@media (max-width: 480px) {
-  .left-nav {
-    width: 100%; // Full width on very small screens
-    padding: 10px; // Adjust padding
-  }
-
-  .link-item {
-    font-size: 0.8rem; // Smaller font size
-  }
-
-  .dropdown-item {
-    font-size: 0.75rem; // Smaller font size for dropdowns
-  }
-}
-
-// Hamburger Button for Mobile
-.hamburger {
-  position: fixed; // Keep it fixed
-  top: 10px; // Position at the top
-  left: 10px; // Position on the left
-  font-size: 24px; // Icon size
-  background: none; // No background
-  border: none; // No border
-  cursor: pointer; // Pointer on hover
-  z-index: 1000; // Above everything else
-}
-
-// Hide Hamburger on larger screens
-@media (min-width: 768px) {
+  /* On smaller screens, show the hamburger button */
   .hamburger {
-    display: none; // Hide the button on larger screens
+    display: block;
+  }
+
+  /* Collapse the sidebar */
+  .left-nav {
+    left: -250px;
+  }
+
+  .left-nav.open {
+    left: 0;
+  }
+
+  .content-area {
+    margin-left: 0;
   }
 }
 
-// Initially hide the nav on mobile screens
-.left-nav {
-  transform: translateX(-100%); // Off-screen by default
-  transition: transform 0.3s ease; // Smooth transition
-}
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
 
-// Show the nav when open
-.left-nav.open {
-  transform: translateX(0); // Slide in from left
-}
-*/
+  .left-nav {
+    left: 0;
+  }
 
+  .content-area {
+    margin-left: 250px;
+  }
+}
