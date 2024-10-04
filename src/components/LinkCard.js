@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
-const LinkCard = ({ links, courses, showCourse, handleShowCourse, setSelectedCourse }) => {
+const LinkCard = ({ links, courses, setSelectedCourse }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  function handleDropdowntoggle(link) {
+  const handleDropdowntoggle = (link) => {
     if (link === 'Courses') {
       setDropdownOpen(!isDropdownOpen);
-    }
-    else if (link === 'Dashboard'){
+    } else if (link === 'Dashboard') {
       setSelectedCourse("Dashboard");
     }
-  }
+  };
+
   const handleCourseClick = (course) => {
     setSelectedCourse(course);
     setDropdownOpen(false); // Close the dropdown after selection
