@@ -16,7 +16,7 @@ const LeftNav = ({ selectedCourse, setSelectedCourse }) => {
     <>
       {/* Hamburger button for small screens */}
       <button className="hamburger" onClick={toggleNav}>
-        <i className="fa fa-bars"></i>
+      <i className="fa fa-bars" style={{ color: 'white' }}></i>
       </button>
       
       <aside className={`left-nav ${isNavOpen ? 'open' : ''}`}>

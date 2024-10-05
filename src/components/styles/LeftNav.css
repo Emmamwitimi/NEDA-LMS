@@ -32,6 +32,7 @@ body.dark-mode .left-nav {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  color: #f0f0f0;
   display: none;
 }
 
